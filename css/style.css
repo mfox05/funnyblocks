@@ -1,0 +1,98 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Nunito', sans-serif;
+	background-color: #333;
+	overflow: hidden;
+	color: #fff;
+}
+
+.bdr {
+	border: 2px solid #000;
+	position: absolute;
+	cursor: pointer;
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 60px;
+	height: 60px;
+}
+
+.same-short {
+	position: absolute;
+	width: 300px;
+}
+
+.same-short23 {
+	top: 300px;
+	border-radius: 10px;
+}
+
+.long {
+	background-color: tomato;
+	width: 800px;
+	top: 50px;
+	left: calc(50% - 400px);
+	transition: background-color 0.5s, scale 0.5s, width 0.5s, left 0.5s;
+}
+
+.short {
+	background-color: royalblue;
+	top: 180px;
+	left: calc(50% - 150px);
+	transition: rotate 1s linear;
+	border-radius: 25px;
+}
+
+.short2 {
+	background-color: rgb(138, 138, 4);
+	top: 300px;
+	left: calc(25% - 150px);
+	transition: rotate 1s 1s ease-out;
+}
+
+.short3 {
+	background-color: rgb(2, 170, 2);
+	top: 300px;
+	left: calc(75% - 150px);
+	transition: rotate 1s 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.center {
+	position: absolute;
+	background-color: #666;
+	height: 200px;
+	width: 400px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	transform-origin: 10% 10%;
+	transition: background-color 0.5s, color .5s;
+	line-height: 200px;
+}
+
+
+.long:hover {
+	scale: 1.5;
+	background-color: rgb(228, 63, 34);
+	width: 400px;
+	left: calc(50% - 200px);
+}
+
+.short:hover {
+	rotate: 360deg;
+}
+
+.short:hover ~ .short2 {
+	rotate: 360deg;
+}
+.short:hover ~ .short3 {
+	rotate: -360deg;
+}
+.center:hover {
+	background-color: #fff;
+	color: #000;
+}
